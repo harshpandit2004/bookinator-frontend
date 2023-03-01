@@ -1,0 +1,135 @@
+.App {
+  text-align: center;
+  background-image: url("Staaaars.jpg");
+  min-height: 100vh;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: black;
+}
+
+section {
+  margin: 1rem auto;
+  width: 35rem;
+  height: fit-content;
+  max-width: 75rem;
+  text-align: center;
+  color: #ffffff;
+  background-color: #12121285;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.bookcover {
+  max-height: 50vh;
+  overflow: none;
+}
+.bookcover:img{
+  max-height: 50vh;
+}
+
+.GyanWalaDiv {
+  margin: 1rem auto;
+  width: 35rem;
+  height: fit-content;
+  max-width: 75rem;
+  text-align: center;
+  font-size: 15px;
+  color: #bdbdbd;
+  background-color: #121212dc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.actualGyan {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.5s ease 0s;
+}
+a:hover {
+  color: #a459ff;
+  text-decoration: none;
+}
+
+button {
+  padding: 0.75rem 2rem;
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 20px;
+  margin: 20px auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  background-color: #230052;
+  box-shadow: 0px 15px 20px #24005275;
+  border: none;
+  border-radius: 45px;
+  transition: all 0.25s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin: 1rem;
+}
+button:hover,
+button:after,
+button:active {
+  background-color: #230052;
+  box-shadow: 0px 15px 20px #240052e1;
+  transform: translateY(-7px);
+}
+
+h1 {
+  display: flex;
+  font-size: 1em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  justify-content: center;
+}
+
+/*Media queries*/
+
+@media (max-device-width: 510px) {
+  section {
+    width: 20rem;
+    margin: auto 2rem;
+  }
+  .GyanWalaDiv {
+    height: fit-content;
+    width: 20rem;
+    margin: 2rem 2rem;
+  }
+  button:hover {
+    background-color: #230052;
+    box-shadow: 0px 15px 20px #24005275;
+    transform: translateY(0px);
+  }
+  button:after,
+  button:active {
+    background-color: #230052;
+    box-shadow: 0px 15px 20px #240052e1;
+    transform: translateY(-7px);
+  }
+}
