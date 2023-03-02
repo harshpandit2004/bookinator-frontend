@@ -16,7 +16,7 @@ export default function Navbar() {
           </td>
           <td>
             <a
-              href="https://github.com/harshpandit2004/batsignal-whole"
+              href="https://github.com/harshpandit2004/bookinator-frontend"
               class="stylisethisbutton"
               title="Github"
             >
