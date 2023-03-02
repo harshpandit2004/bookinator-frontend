@@ -3,6 +3,7 @@ import "./App.css";
 import Book from "./Components/book";
 import AddBook from "./Components/addBook";
 //import Rover from "./Components/Rover";
+import Navbar from "./Components/Navbar";
 
 function App() {
   //variables
@@ -58,38 +59,41 @@ function App() {
 
   return (
     <div className="App">
-      {bookvisiblity === false && addbookvisiblity === false ? (
-        <div>
-          <section>
-            Hello, I am a book reccomendation engine called <br />
-            <br />✨ Bookinator!! ✨
-          </section>
-          <button onClick={fetchDataHandler}>Reccomend Me A Book</button>
-          <br />
-          <button onClick={addDataHandler}>Add Book to the Library</button>
-        </div>
-      ) : (
-        <>
-          {bookvisiblity === true && addbookvisiblity === false ? (
-            <div>
-              <Book
-                coverimg={coverimg}
-                name={name}
-                summary={summary}
-                author={author}
-                genre={genre}
-                pirate_link={pirate_link}
-              />
-              <button onClick={revert}>Return</button>
-            </div>
-          ) : (
-            <div>
-              <AddBook/>
-              <button onClick={revert}>Return</button>
-            </div>
-          )}
-        </>
-      )}
+      <Navbar />
+      <div className="App-Header">
+        {bookvisiblity === false && addbookvisiblity === false ? (
+          <div>
+            <section>
+              Hello, I am a book reccomendation engine called <br />
+              <br />✨ Bookinator!! ✨
+            </section>
+            <button onClick={fetchDataHandler}>Reccomend Me A Book</button>
+            <br />
+            <button onClick={addDataHandler}>Add Book to the Library</button>
+          </div>
+        ) : (
+          <>
+            {bookvisiblity === true && addbookvisiblity === false ? (
+              <div>
+                <Book
+                  coverimg={coverimg}
+                  name={name}
+                  summary={summary}
+                  author={author}
+                  genre={genre}
+                  pirate_link={pirate_link}
+                />
+                <button onClick={revert}>Return</button>
+              </div>
+            ) : (
+              <div>
+                <AddBook />
+                <button onClick={revert}>Return</button>
+              </div>
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 }

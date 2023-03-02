@@ -2,16 +2,42 @@
   text-align: center;
   background-image: url("Staaaars.jpg");
   min-height: 100vh;
-  display: flex;
   /* flex-direction: column; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-Header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+
 .App-link {
   color: black;
+}
+
+.Navbar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: linear-gradient(#303030a9, rgba(0, 0, 0, 0));
+  padding: 1.10rem;
+}
+
+.stylisethisbutton {
+  padding: 1rem;
+  border-radius: 50%;
+  margin: 2rem;
+  color: white;
 }
 
 section {
