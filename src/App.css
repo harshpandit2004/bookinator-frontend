@@ -34,7 +34,8 @@ section {
   overflow: none;
 }
 .bookcover:img{
-  max-height: 50vh;
+  height: 50vh;
+  width: auto;
 }
 
 .GyanWalaDiv {
@@ -109,9 +110,89 @@ h1 {
   justify-content: center;
 }
 
+
+.AddBillsWalaDiv {
+  transition: all 0.3s ease 0s;
+  transition-delay: 2s;
+  background-color: #121212ce;
+  box-shadow: 0px 0px 20px #ffffff66;
+  color: #ffffff;
+  width: 50vw;
+  padding: 2rem 0rem;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  border-radius: 4rem;
+  display: flex;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addbill-title {
+  background-color: #e4e4e4bb;
+  text-align: center;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  border: none;
+}
+.addbill-title:hover {
+  transition-delay: 0.5s;
+  background-color: #e4e4e4;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 15px 20px #00000066;
+}
+
+.addbill-body {
+  background-color: #e4e4e4bb;
+  text-align: center;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: none;
+  border: none;
+}
+.addbill-body:hover {
+  transition-delay: 0.5s;
+  background-color: #e4e4e4;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 15px 20px #00000066;
+}
+
+.addbillhandler {
+  width: 140px;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #c0c0c0;
+  box-shadow: 0px 15px 20px #ffffff66;
+  border: none;
+  border-radius: 45px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin: 1rem;
+}
+.addbillhandler:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 15px 20px #ffffff66;
+  color: rgb(0, 0, 0);
+  transform: translateY(-7px);
+}
+
 /*Media queries*/
 
 @media (max-device-width: 510px) {
+
   section {
     width: 20rem;
     margin: auto 2rem;
@@ -131,5 +212,8 @@ h1 {
     background-color: #230052;
     box-shadow: 0px 15px 20px #240052e1;
     transform: translateY(-7px);
+  }
+  .AddBillsWalaDiv {
+    width: 25rem;
   }
 }

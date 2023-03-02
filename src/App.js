@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Book from "./Components/book";
+import AddBook from "./Components/addBook";
 //import Rover from "./Components/Rover";
 
 function App() {
@@ -11,11 +12,12 @@ function App() {
   const [coverimg, setCoverimg] = useState("");
   const [pirate_link, setPirate_link] = useState("");
   const [summary, setSummary] = useState("");
-  const [visiblity, setVisiblity] = useState(false);
+  const [bookvisiblity, setbookVisiblity] = useState(false);
+  const [addbookvisiblity, setaddbookVisiblity] = useState(false);
 
   //api caller
   const fetchDataHandler = () => {
-    setVisiblity(true);
+    setbookVisiblity(true);
     fetch(
       //fetching the api via the link
       "https://dead-tan-beaver-robe.cyclic.app/getbooklist"
@@ -45,33 +47,48 @@ function App() {
       });
   };
 
+  const addDataHandler = () => {
+    setaddbookVisiblity(true);
+  };
+
   const revert = () => {
-    setVisiblity(false);
+    setbookVisiblity(false);
+    setaddbookVisiblity(false);
   };
 
   return (
     <div className="App">
-      {visiblity === false ? (
+      {bookvisiblity === false && addbookvisiblity === false ? (
         <div>
           <section>
-            Hello, I am a book reccomendation engine called <br/><br/>✨ Bookinator!! ✨
+            Hello, I am a book reccomendation engine called <br />
+            <br />✨ Bookinator!! ✨
           </section>
           <button onClick={fetchDataHandler}>Reccomend Me A Book</button>
-          <br/>
-          <button onClick={fetchDataHandler}>Add Book to the Library</button>
+          <br />
+          <button onClick={addDataHandler}>Add Book to the Library</button>
         </div>
       ) : (
-        <div>
-          <Book
-            coverimg={coverimg}
-            name={name}
-            summary={summary}
-            author={author}
-            genre={genre}
-            pirate_link={pirate_link}
-          />
-          <button onClick={revert}>Return</button>
-        </div>
+        <>
+          {bookvisiblity === true && addbookvisiblity === false ? (
+            <div>
+              <Book
+                coverimg={coverimg}
+                name={name}
+                summary={summary}
+                author={author}
+                genre={genre}
+                pirate_link={pirate_link}
+              />
+              <button onClick={revert}>Return</button>
+            </div>
+          ) : (
+            <div>
+              <AddBook/>
+              <button onClick={revert}>Return</button>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

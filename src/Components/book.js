@@ -23,7 +23,7 @@ export default function Book(props) {
         {props.name} {<br />}
         {<br />}
         <div className="bookcover">
-          <img src={props.coverimg} alt="Loading..." />
+          <img className="bookcover" src={props.coverimg} alt="Loading..." />
         </div>
       </section>
       <div className="GyanWalaDiv">
