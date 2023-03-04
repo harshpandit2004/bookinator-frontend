@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: url("Staaaars.jpg");
+  background-image: url("./video.gif");
   min-height: 100vh;
   /* flex-direction: column; */
   font-size: calc(10px + 2vmin);
@@ -42,12 +42,12 @@
 
 section {
   margin: 1rem auto;
-  width: 35rem;
+  width: 35vw;
   height: fit-content;
   max-width: 75rem;
   text-align: center;
-  color: #ffffff;
-  background-color: #12121285;
+  color: #000;
+  background-color: #ffffff85;
   padding: 1.5rem;
   border-radius: 12px;
   display: flex;
@@ -121,7 +121,7 @@ button {
 button:hover,
 button:after,
 button:active {
-  background-color: #230052;
+  background-color: #b379ff;
   box-shadow: 0px 15px 20px #240052e1;
   transform: translateY(-7px);
 }
