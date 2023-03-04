@@ -64,7 +64,7 @@ function App() {
         {bookvisiblity === false && addbookvisiblity === false ? (
           <div>
             <section>
-              I am a book reccomendation engine called <br />
+              I am a book recommendation engine called <br />
               <br />✨ Bookinator!! ✨
             </section>
             <button onClick={fetchDataHandler}>Reccomend Me A Book</button>

@@ -5,7 +5,6 @@ export default function Navbar() {
     <div className="Navbar">
       <table class="reachmeout">
         <tr>
-          
           <td>
             <a
               href="https://www.linkedin.com/in/harsh-pandit-4b1013235/"
