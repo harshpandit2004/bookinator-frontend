@@ -5,6 +5,7 @@ export default function Navbar() {
     <div className="Navbar">
       <table class="reachmeout">
         <tr>
+          
           <td>
             <a
               href="https://github.com/harshpandit2004/bookinator-frontend"

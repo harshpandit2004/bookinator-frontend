@@ -11,7 +11,7 @@ export default function AddBook(props) {
   const addBillHandler = () => {
     //adding shit to the bill list
     fetch("https://dead-tan-beaver-robe.cyclic.app/addbook", {
-      method: "POST",
+      method: "post",
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
