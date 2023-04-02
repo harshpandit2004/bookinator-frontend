@@ -2,15 +2,21 @@ import React from "react";
 function Info(props) {
   var lnk = props.pirate_link;
   return (
-    <div className="actualGyan">
-      Genre: {props.genre}
-      {<br />}
-      Author: {props.author}
-      {<br />}
-      Summary: {props.info}
-      {<br />}
+    <div>
+      <div className="actualGyan">
+        <p>
+        Genre: {props.genre}
+        </p>
+        <p>
+        Author: {props.author}
+        </p>
+        <p>
+        Summary: {props.info}
+        </p>
+      </div>
       <a href={lnk}>
-      <button>Pirate this Book!</button></a>
+        <button className="PirateLink">(Click here to Pirate this book)</button>
+      </a>
     </div>
   );
 }

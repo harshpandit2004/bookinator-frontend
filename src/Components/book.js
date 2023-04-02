@@ -19,8 +19,9 @@ export default function Book(props) {
   return (
     <div>
       <section>
-        Book Recommendation: {<br />}
+        Book Recommendation:
         {props.name} {<br />}
+        {<br />}
         {<br />}
         <div className="bookcover">
           <img className="bookcover" src={props.coverimg} alt="Loading..." />
