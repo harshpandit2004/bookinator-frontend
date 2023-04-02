@@ -75,7 +75,6 @@ function App() {
         setName(bookobj.name);
         setAuthor(bookobj.author);
         setCoverimg(bookobj.coverimg);
-        var coverimG = bookobj.coverimg;
         setPirate_link(bookobj.pirate_link);
         setSummary(bookobj.summary);
       });
