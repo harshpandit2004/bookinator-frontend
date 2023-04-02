@@ -8,7 +8,7 @@ export default function AddBook(props) {
   const [pirate_link, setPirate_link] = useState("");
   const [summary, setSummary] = useState("");
 
-  const addBillHandler = () => {
+  const addBookHandler = () => {
     //adding shit to the bill list
     fetch("https://dead-tan-beaver-robe.cyclic.app/addbook", {
       method: "Post",
@@ -40,7 +40,7 @@ export default function AddBook(props) {
   };
 
   return (
-    <div className="AddBillsWalaDiv">
+    <div className="AddBooksWalaDiv">
       Add a Book: <br />
       <br />
       <input
@@ -92,7 +92,7 @@ export default function AddBook(props) {
         onChange={(e) => setSummary(e.target.value)}
       />
       <br />
-      <button className="addbillhandler" onClick={addBillHandler}>
+      <button className="addbookhandler" onClick={addBookHandler}>
         Add
       </button>
     </div>

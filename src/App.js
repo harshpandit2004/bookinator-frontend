@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Book from "./Components/book";
 import AddBook from "./Components/addBook";
-//import Rover from "./Components/Rover";
+import Library from "./Components/Library";
 import Navbar from "./Components/Navbar";
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
   const [coverimg, setCoverimg] = useState("");
   const [pirate_link, setPirate_link] = useState("");
   const [summary, setSummary] = useState("");
+  const [bookList, setBookList] = useState([]);
   const [bookVisiblity, setbookVisiblity] = useState(false);
   const [addbookVisiblity, setaddbookVisiblity] = useState(false);
   const [bookListVisiblity, setBookListVisiblity] = useState(false);
@@ -51,7 +52,7 @@ function App() {
     setaddbookVisiblity(true);
   };
 
-  const viewDataHandler =()=>{
+  const viewDataHandler = () => {
     setBookListVisiblity(true);
     fetch(
       //fetching the api via the link
@@ -63,25 +64,15 @@ function App() {
       })
       .then((data) => {
         //getting a random number
-        var min = 1;
-        var max = data.length;
-        var rand = Math.trunc(min + Math.random() * (max - min));
-        console.log(rand);
-
         console.log(data);
-        //choosing the book
-        var bookobj = data[rand];
-        setGenre(bookobj.genre);
-        setName(bookobj.name);
-        setAuthor(bookobj.author);
-        setCoverimg(bookobj.coverimg);
-        setPirate_link(bookobj.pirate_link);
-        setSummary(bookobj.summary);
+        setBookList(data);
       });
-  }
+  };
+
   const revert = () => {
     setbookVisiblity(false);
     setaddbookVisiblity(false);
+    setBookListVisiblity(false);
   };
 
   return (
@@ -100,16 +91,19 @@ function App() {
             <br />
             <button onClick={addDataHandler}>Add Book to the Library</button>
             <br />
-            <button onClick={viewDataHandler}>Browse our library of books</button>
+            <button onClick={viewDataHandler}>
+              Browse our library of books
+            </button>
           </div>
         ) : (
           <>
             {bookVisiblity === false &&
             addbookVisiblity === false &&
             bookListVisiblity === true ? (
-              <div>
-
-              </div>
+              <>
+                <Library bookList={bookList} />
+                <button onClick={revert}>Return</button>
+              </>
             ) : (
               <>
                 {bookVisiblity === true && addbookVisiblity === false ? (
