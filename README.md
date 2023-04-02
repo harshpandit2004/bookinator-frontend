@@ -1,5 +1,7 @@
-# This Website is being hosted using Firebase
-[Project](https://apicture-of-the-day.web.app/index.html)
+A book recommendation engine designed primarily for novice readers
+
+# This Website is being hosted using Netlify
+[Project](bookinator-9000.netlify.app/)
 
 # Getting Started with Create React App
 
