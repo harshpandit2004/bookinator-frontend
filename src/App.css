@@ -32,6 +32,18 @@
   padding: 1.1rem;
 }
 
+.BookDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 section {
   margin: 1rem auto;
   width: 35vw;
@@ -250,7 +262,25 @@ h1 {
 
 /*Media queries*/
 
-@media (max-device-width: 510px) {
+@media (max-width: 600px) {
+  .BookDiv {
+    flex-direction: column;
+    width: 90vw;
+  }
+
+  .bookList {
+    transition: all 0.3s ease 0s;
+    transition-delay: 2s;
+    background-color: #ffffffbb;
+    box-shadow: 0px 0px 20px #ffffff66;
+    color: #000000;
+    width: 100vw;
+    padding: 2rem 2rem;
+    padding-bottom: 1rem;
+    border-radius: 2rem;
+    table-layout: fixed;
+  }
+
   section {
     width: 20rem;
     margin: auto 2rem;
@@ -272,6 +302,10 @@ h1 {
     transform: translateY(-7px);
   }
   .AddBooksWalaDiv {
-    width: 25rem;
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #f2f2f200;
+    box-shadow: 0px 0px 20px #ffffff00;
   }
 }

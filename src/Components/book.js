@@ -17,9 +17,9 @@ export default function Book(props) {
   };
 
   return (
-    <div>
+    <div className="BookDiv">
       <section>
-        Book Recommendation:
+        Book Recommendation: {" "}
         {props.name} {<br />}
         {<br />}
         {<br />}

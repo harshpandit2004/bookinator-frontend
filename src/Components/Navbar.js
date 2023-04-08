@@ -8,9 +8,9 @@ export default function Navbar() {
           <tr>
             <td>
               <a
-                href="https://www.linkedin.com/in/harsh-pandit-4b1013235/"
+                href="https://6431171ffc1ce10008c9dae2--bookinator-meet-our-team.netlify.app/people.html"
                 className="stylisethisbutton"
-                title="LinkedIn"
+                title="Team!"
               >
                 <i className="fab fa-linkedin"></i>
               </a>

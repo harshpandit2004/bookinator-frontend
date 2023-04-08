@@ -15,7 +15,7 @@ function Info(props) {
         </p>
       </div>
       <a href={lnk}>
-        <button className="PirateLink">(Click here to Pirate this book)</button>
+        <button className="PirateLink">(Pirate this book!)</button>
       </a>
     </div>
   );
