@@ -1,4 +1,5 @@
 import React from "react";
+import Bookinative from "../Releases/Bookinative.apk";
 
 export default function Navbar() {
   return (
@@ -8,11 +9,20 @@ export default function Navbar() {
           <tr>
             <td>
               <a
-                href="https://6431171ffc1ce10008c9dae2--bookinator-meet-our-team.netlify.app/people.html"
+                href={Bookinative}
                 className="stylisethisbutton"
-                title="Team!"
+                title="Android"
               >
-                <i className="fab fa-linkedin"></i>
+                <i className="fab fa-android"></i>
+              </a>
+            </td>
+            <td>
+              <a
+                href="http://portfolio-ce6f9.web.app/"
+                className="stylisethisbutton"
+                title="Portfolio"
+              >
+                <i className="fa fa-link"></i>
               </a>
             </td>
             <td>

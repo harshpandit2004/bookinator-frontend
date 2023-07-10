@@ -1,4 +1,4 @@
-A book recommendation engine designed primarily for novice readers
+The world of literature is vast and diverse, offering countless options for readers to explore. However, for novice readers, selecting the right book to read can be a daunting task To address this challenge, this software was created. The Software includes - A Custom Node Backend, A React Web Application, and a Flutter Android Application
 
 # This Website is being hosted using Netlify
 [Project](bookinator-9000.netlify.app/)
